@@ -1,0 +1,26 @@
+1. As máquinas que contén o documento. 
+/equipos/máquina 
+
+2. A información correspondente ao hardware das máquinas. 
+/equipos/máquina/hardware
+
+3. A información de configuración das máquinas. 
+/equipos/máquina/config
+
+4. A lista de fabricantes dos equipos. 
+/equipos/máquina/hardware/fabricante
+
+5. A lista de discos que conteñen. 
+/equipos/máquina/hardware/disco
+
+6. Os enderezos IP.
+/equipos/máquina/config/IP
+
+7. Os nomes das máquinas. 
+//máquina/@nome 
+
+8. Os nomes das máquinas que teñan gravadora óptica. 
+//máquina[hardware/gravadora]/@nome 
+
+9. O sistema operativo das máquinas nas que figure o "role"
+//máquina[config/role]/config/OS

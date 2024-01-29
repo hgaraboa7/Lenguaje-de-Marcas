@@ -1,0 +1,269 @@
+﻿Aquí tienes una chuleta completa de consultas XPath con más de 30 ejemplos:
+
+
+1. **Seleccionar elementos por nombre:**
+   - `//elementName`: Selecciona todos los elementos con el nombre especificado en cualquier lugar del documento.
+   - `/`: Selecciona el elemento raíz del documento.
+
+
+2. **Seleccionar elementos por posición:**
+   - `(//elementName)[1]`: Selecciona el primer elemento con el nombre especificado.
+   - `(//elementName)[position]`: Selecciona todos los elementos con el nombre especificado en la posición especificada.
+
+
+3. **Seleccionar elementos por atributo:**
+   - `//*[@attributeName]`: Selecciona todos los elementos que tienen un atributo específico.
+   - `//*[@attributeName='value']`: Selecciona todos los elementos con un atributo específico y un valor específico.
+
+
+4. **Selección de nodos específicos:**
+   - `/parentNode/childNode`: Selecciona el nodo hijo inmediato con el nombre especificado.
+   - `//parentNode//descendantNode`: Selecciona el nodo descendiente con el nombre especificado.
+
+
+5. **Selección basada en contenido de texto:**
+   - `//elementName[text()='value']`: Selecciona elementos con un texto específico.
+   - `//elementName[contains(text(),'value')]`: Selecciona elementos que contienen cierto texto.
+
+
+6. **Combinar selecciones:**
+   - `//elementName[@attributeName='value' and text()='value']`: Selecciona elementos que cumplen múltiples condiciones.
+   - `//elementName[@attributeName='value' or text()='value']`: Selecciona elementos que cumplen al menos una de varias condiciones.
+
+
+7. **Seleccionar por posición relativa:**
+   - `//elementName/following-sibling::elementName[1]`: Selecciona el primer elemento después de otro elemento.
+   - `//elementName/preceding-sibling::elementName[1]`: Selecciona el primer elemento antes de otro elemento.
+
+
+8. **Selección de nodos según su posición:**
+   - `//elementName/*[1]`: Selecciona todos los elementos que son el primer hijo.
+   - `//elementName/*[last()]`: Selecciona todos los elementos que son el último hijo.
+
+
+9. **Selección basada en expresiones de comparación:**
+   - `//elementName[@attributeName > value]`: Selecciona elementos cuyo atributo sea mayor que cierto valor.
+   - `//elementName[@attributeName < value]`: Selecciona elementos cuyo atributo sea menor que cierto valor.
+
+
+10. **Selección de elementos dentro de un rango de posiciones:**
+    - `(//elementName)[startPosition to endPosition]`: Selecciona elementos dentro de un rango de posiciones.
+
+
+11. **Selección de elementos con atributos que empiezan por un valor específico:**
+    - `//elementName[starts-with(@attributeName, 'value')]`: Selecciona elementos cuyo atributo comienza con un valor específico.
+
+
+12. **Selección de elementos por su valor numérico:**
+    - `//elementName[number(@attributeName)=value]`: Selecciona elementos con un atributo numérico igual a cierto valor.
+
+
+13. **Funciones de cadena:**
+    - `substring(string, start, length)`: Devuelve una subcadena de una cadena dada.
+    - `string-length(string)`: Devuelve la longitud de una cadena dada.
+    - `concat(string1, string2, ...)`: Concatena varias cadenas y devuelve el resultado.
+
+
+14. **Funciones numéricas:**
+    - `sum(nodeSet)`: Devuelve la suma de todos los números en un conjunto de nodos.
+    - `floor(number)`: Redondea hacia abajo un número decimal.
+    - `ceiling(number)`: Redondea hacia arriba un número decimal.
+
+
+15. **Funciones de fecha y hora:**
+    - `current-date()`: Devuelve la fecha actual.
+    - `current-time()`: Devuelve la hora actual.
+    - `year-from-date(date)`: Extrae el año de una fecha dada.
+
+
+16. **Obtener el nombre del elemento actual:**
+    - `name()`: Devuelve el nombre del elemento actual.
+
+
+17. **Obtener el valor de un atributo de un elemento actual:**
+    - `@attributeName`: Devuelve el valor del atributo especificado del elemento actual.
+
+
+18. **Seleccionar nodos por su posición absoluta:**
+    - `(//elementName)[position()]`: Selecciona el nodo en la posición actual.
+
+
+19. **Seleccionar nodos según su longitud de texto:**
+    - `//elementName[string-length(text()) > value]`: Selecciona elementos cuya longitud de texto sea mayor que un valor específico.
+
+
+20. **Seleccionar elementos con texto que termina con un valor específico:**
+    - `//elementName[substring(text(), string-length(text()) - string-length('value') + 1) = 'value']`: Selecciona elementos cuyo texto finaliza con un valor específico.
+
+
+21. **Seleccionar elementos con atributos que contienen un valor específico:**
+    - `//elementName[contains(@attributeName, 'value')]`: Selecciona elementos cuyo atributo contiene un valor específico.
+
+
+22. **Seleccionar nodos por su posición relativa al último hijo:**
+    - `//elementName/*[last()-1]`: Selecciona el penúltimo hijo del elemento.
+
+
+23. **Seleccionar nodos según su nombre y posición:**
+    - `//elementName[position() < 3]`: Selecciona los dos primeros nodos con el nombre especificado.
+
+
+24. **Seleccionar elementos que son hijos directos de otro elemento:**
+    - `//parentElement/childElement`: Selecciona todos los elementos hijos directos del elemento padre.
+
+
+25. **Seleccionar nodos basados en el valor de un atributo de un ancestro:**
+    - `//ancestorElement[@attributeName='value']/descendantElement`: Selecciona los elementos descendientes de un ancestro con un atributo específico.
+
+
+26. **Seleccionar nodos basados en el valor de un atributo de un ancestro o del nodo actual:**
+    - `//ancestor-or-self::elementName[@attributeName='value']`: Selecciona el nodo actual y los ancestros que tienen un atributo específico.
+
+
+27. **Seleccionar nodos que no contienen ciertos atributos:**
+    - `//elementName[not(@attributeName)]`: Selecciona elementos que no tienen un atributo específico.
+
+
+28. **Seleccionar nodos con texto que coincide con una expresión regular:**
+    - `//elementName[matches(text(), 'regex')]`: Selecciona elementos cuyo texto coincide con una expresión regular.
+
+
+29. **Seleccionar nodos basados en la presencia de un elemento secundario:**
+    - `//elementName[elementName]`: Selecciona elementos que contienen un elemento
+
+
+ secundario con el mismo nombre.
+
+
+30. **Seleccionar nodos que no tienen elementos secundarios:**
+    - `//elementName[not(child::*)]`: Selecciona elementos que no tienen elementos secundarios.
+
+
+31. **Seleccionar nodos con atributos que no contienen cierto valor:**
+    - `//elementName[not(@attributeName='value')]`: Selecciona elementos cuyo atributo no contiene cierto valor.
+
+
+
+
+
+
+32. **Seleccionar nodos según la existencia de un atributo:**
+   - `//elementName[@attributeName]`: Selecciona elementos que tienen un atributo específico.
+
+
+33. **Seleccionar nodos basados en la combinación de atributos:**
+   - `//elementName[@attribute1='value1'][@attribute2='value2']`: Selecciona elementos que tienen valores específicos para múltiples atributos.
+
+
+34. **Seleccionar nodos que no tienen texto:**
+   - `//elementName[not(text())]`: Selecciona elementos que no tienen contenido de texto.
+
+
+35. **Seleccionar nodos con ciertos elementos secundarios:**
+   - `//elementName[childName]`: Selecciona elementos que tienen un elemento secundario con el nombre especificado.
+
+
+36. **Seleccionar nodos con ciertos elementos secundarios que contienen un valor específico:**
+   - `//elementName[childName='value']`: Selecciona elementos que tienen un elemento secundario con el nombre especificado y un valor específico.
+
+
+37. **Seleccionar nodos que son el primer hijo de su padre:**
+   - `//parentElement/childElement[1]`: Selecciona el primer hijo de un elemento padre específico.
+
+
+38. **Seleccionar nodos que son el último hijo de su padre:**
+   - `//parentElement/childElement[last()]`: Selecciona el último hijo de un elemento padre específico.
+
+
+39. **Seleccionar nodos que son hijos directos y tienen un cierto valor de atributo:**
+   - `//parentElement/childElement[@attributeName='value']`: Selecciona los hijos directos de un elemento padre específico que tienen un valor de atributo específico.
+
+
+40. **Seleccionar nodos con un atributo que no es igual a un valor específico:**
+   - `//elementName[@attributeName!='value']`: Selecciona elementos que tienen un atributo diferente al valor especificado.
+
+
+41. **Seleccionar nodos que tienen un atributo igual a uno de varios valores específicos:**
+   - `//elementName[@attributeName=('value1', 'value2', 'value3')]`: Selecciona elementos que tienen un atributo con uno de varios valores específicos.
+
+
+42. **Seleccionar nodos que tienen un cierto número de elementos secundarios:**
+   - `//elementName[count(child::*)=n]`: Selecciona elementos que tienen un número específico de elementos secundarios.
+
+
+43. **Seleccionar nodos que tienen un número específico de elementos secundarios con un nombre determinado:**
+   - `//elementName[count(childName)=n]`: Selecciona elementos que tienen un número específico de elementos secundarios con un nombre específico.
+
+
+44. **Seleccionar nodos que contienen un valor numérico específico:**
+   - `//elementName[number(text())=value]`: Selecciona elementos que contienen un valor numérico específico.
+
+
+45. **Seleccionar nodos que contienen un valor numérico dentro de un rango específico:**
+   - `//elementName[number(text())>=minValue and number(text())<=maxValue]`: Selecciona elementos que contienen un valor numérico dentro de un rango específico.
+
+
+46. **Seleccionar nodos con un atributo que comienza con un cierto prefijo:**
+   - `//elementName[starts-with(@attributeName, 'prefix')]`: Selecciona elementos que tienen un atributo cuyo valor comienza con un cierto prefijo.
+
+
+47. **Seleccionar nodos que tienen un atributo que termina con un cierto sufijo:**
+   - `//elementName[substring(@attributeName, string-length(@attributeName) - string-length('suffix') + 1) = 'suffix']`: Selecciona elementos que tienen un atributo cuyo valor termina con un cierto sufijo.
+
+
+48. **Seleccionar nodos que tienen un atributo que contiene una subcadena específica:**
+   - `//elementName[contains(@attributeName, 'substring')]`: Selecciona elementos que tienen un atributo que contiene una subcadena específica.
+
+
+49. **Seleccionar nodos con un atributo que es una lista separada por espacios que contiene un valor específico:**
+   - `//elementName[contains(concat(' ', @attributeName, ' '), ' value ')]`: Selecciona elementos que tienen un atributo que es una lista separada por espacios que contiene un valor específico.
+
+
+50. **Seleccionar nodos que tienen un cierto nombre de atributo y un valor de atributo específico:**
+    - `//elementName[@*='value']`: Selecciona elementos que tienen un atributo con un valor específico, sin importar el nombre del atributo.
+
+
+51. **Seleccionar nodos que tienen un atributo que es igual al valor de otro atributo:**
+    - `//elementName[@attributeName1=@attributeName2]`: Selecciona elementos que tienen un atributo cuyo valor es igual al valor de otro atributo.
+
+
+52. **Seleccionar nodos que tienen un atributo con un valor que contiene caracteres alfanuméricos:**
+    - `//elementName[@attributeName[matches(., '^[a-zA-Z0-9]+$')]]`: Selecciona elementos que tienen un atributo con un valor que contiene solo caracteres alfanuméricos.
+
+
+53. **Seleccionar nodos que son hijos de un elemento pero no son el primer hijo:**
+    - `//parentElement/childElement[position() > 1]`: Selecciona los hijos de un elemento padre específico que no son el primer hijo.
+
+
+54. **Seleccionar nodos que son hijos de un elemento pero no son el último hijo:**
+    - `//parentElement/childElement[position() < last()]`: Selecciona los hijos de un elemento padre específico que no son el último hijo.
+
+
+55. **Seleccionar nodos que tienen un atributo con un valor que contiene solo dígitos:**
+    - `//elementName[@attributeName[matches(., '^[0-9]+$')]]`: Selecciona elementos que tienen un atributo con
+
+
+ un valor que contiene solo dígitos.
+
+
+56. **Seleccionar nodos que contienen texto con formato específico de fecha:**
+    - `//elementName[contains(text(), 'YYYY-MM-DD')]`: Selecciona elementos que contienen texto con un formato específico de fecha.
+
+
+57. **Seleccionar nodos que contienen texto con formato específico de hora:**
+    - `//elementName[contains(text(), 'HH:MM:SS')]`: Selecciona elementos que contienen texto con un formato específico de hora.
+
+
+58. **Seleccionar nodos que contienen texto que no está vacío:**
+    - `//elementName[normalize-space(text()) != '']`: Selecciona elementos que contienen texto que no está vacío.
+
+
+59. **Seleccionar nodos que contienen solo espacios en blanco:**
+    - `//elementName[normalize-space(text()) = '']`: Selecciona elementos que contienen solo espacios en blanco como texto.
+
+
+60. **Seleccionar nodos que contienen texto con un cierto número de palabras:**
+    - `//elementName[count(tokenize(text(), '\s+')) = n]`: Selecciona elementos que contienen un número específico de palabras en su texto.
+
+
+Estas consultas XPath amplían aún más tu capacidad para seleccionar y manipular nodos en documentos XML de manera precisa y eficiente. Utilízalas según tus necesidades específicas y la estructura de tu XML.
